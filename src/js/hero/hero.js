@@ -70,7 +70,10 @@ export function heroHtml() {
     <div class="container hero__grid">
       <div class="hero__intro">
         <span class="eyebrow">Ph.D. · CU Boulder · Fulbright Scholar</span>
-        <h1 class="hero__name"><span>Erick</span><span class="grad-text">Gatica Candia</span></h1>
+        <div class="hero__id">
+          <div class="portrait hero__portrait"><img src="assets/img/profile-400.webp" alt="Erick Gatica Candia" width="400" height="400" fetchpriority="high" /></div>
+          <h1 class="hero__name"><span>Erick</span><span class="grad-text">Gatica Candia</span></h1>
+        </div>
         <p class="hero__tagline">Laser absorption spectroscopy for <em>cleaner combustion</em>.</p>
         <p class="hero__bio">I build laser sensors that read temperature and gas composition straight from the light molecules absorb, now for hydrogen engines in the ${esc(site.lab)} (${esc(site.advisor)}).</p>
         <div class="btn-row">
