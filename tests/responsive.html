@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive preview</title>
+  <style>
+    body { margin: 0; padding: 16px; background: #222; display: flex; gap: 16px; align-items: flex-start; font: 12px system-ui; color: #aaa; }
+    figure { margin: 0; }
+    iframe { border: 0; background: #0b0c10; display: block; }
+  </style>
+</head>
+<body>
+  <!-- Dev tool: shows the site at phone widths. Usage: /tests/responsive.html?route=%23/cv -->
+  <script>
+    const route = new URLSearchParams(location.search).get("route") || "#/";
+    for (const [w, h] of [[390, 1500], [360, 1500]]) {
+      document.body.insertAdjacentHTML("beforeend",
+        `<figure><figcaption>${w}px</figcaption><iframe src="../index.html${route}" width="${w}" height="${h}"></iframe></figure>`);
+    }
+  </script>
+</body>
+</html>

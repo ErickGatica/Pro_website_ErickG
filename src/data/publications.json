@@ -1,0 +1,65 @@
+{
+  "_comment": "Peer-reviewed publications. Newest first is not required (the site sorts by year). 'me' marks which author is Erick (0-based index). Add new papers here, with a DOI.",
+  "publications": [
+    {
+      "id": "callahan2026firebrands",
+      "authors": ["C. Callahan", "E. Gatica", "S. Coburn", "S. Simons-Wellin", "L. Heinzen", "L. Shannon", "J. Farnsworth", "P. E. Hamlington", "G. B. Rieker"],
+      "me": 1,
+      "title": "High-speed thermal imaging of disk-shaped firebrands in a wind tunnel",
+      "journal": "Fire Safety Journal",
+      "volume": "162",
+      "article": "104707",
+      "year": 2026,
+      "doi": "10.1016/j.firesaf.2026.104707",
+      "project": "firebrands"
+    },
+    {
+      "id": "callahan2024egr",
+      "authors": ["C. S. Callahan", "E. Gatica", "S. C. Coburn", "G. J. Hampson", "G. B. Rieker"],
+      "me": 1,
+      "title": "Compact, real-time exhaust gas recirculation rate sensor for use in natural gas combustion engine control",
+      "journal": "Proceedings of the Combustion Institute",
+      "volume": "40",
+      "article": "105692",
+      "year": 2024,
+      "doi": "10.1016/j.proci.2024.105692",
+      "project": "egr-sensor"
+    },
+    {
+      "id": "reyes2023desalination",
+      "authors": ["A. Reyes", "E. Gatica", "L. Henríquez-Vargas", "N. Pailahueque", "A. Vargas"],
+      "me": 1,
+      "title": "Experimental and numerical study of desalination using solar energy and phase change materials",
+      "journal": "Journal of Environmental Chemical Engineering",
+      "volume": "11",
+      "article": "111193",
+      "year": 2023,
+      "doi": "10.1016/j.jece.2023.111193",
+      "project": "solar-desalination"
+    },
+    {
+      "id": "reyes2022modeling",
+      "authors": ["A. Reyes", "E. Gatica", "L. Henríquez-Vargas", "N. Pailahueque"],
+      "me": 1,
+      "title": "Modeling of sawdust drying in spouted beds using solar energy and phase change materials",
+      "journal": "Journal of Energy Storage",
+      "volume": "51",
+      "article": "104441",
+      "year": 2022,
+      "doi": "10.1016/j.est.2022.104441",
+      "project": "solar-drying"
+    },
+    {
+      "id": "reyes2022sawdust",
+      "authors": ["A. Reyes", "E. Gatica", "L. Henríquez-Vargas", "N. Pailahueque"],
+      "me": 1,
+      "title": "Sawdust drying in a series of rectangular base spouted beds using solar energy",
+      "journal": "Journal of Energy Storage",
+      "volume": "48",
+      "article": "103881",
+      "year": 2022,
+      "doi": "10.1016/j.est.2021.103881",
+      "project": "solar-drying"
+    }
+  ]
+}

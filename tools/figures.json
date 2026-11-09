@@ -1,0 +1,129 @@
+{
+  "_comment": "Paper figures to export. 'page' is 0-based. 'clip' (optional) = [x0,y0,x1,y1] in PDF points; otherwise the region above the caption is detected automatically.",
+  "figures": [
+    {
+      "project": "egr-sensor",
+      "id": "fig1-location",
+      "pdf": "Compact, real-time exhaust gas recirculation rate sensor for use in natural gas combustion engine control.pdf",
+      "page": 1,
+      "fig": 1,
+      "clip": [
+        300,
+        552,
+        561,
+        731
+      ]
+    },
+    {
+      "project": "egr-sensor",
+      "id": "fig2-sensor",
+      "pdf": "Compact, real-time exhaust gas recirculation rate sensor for use in natural gas combustion engine control.pdf",
+      "page": 3,
+      "fig": 2
+    },
+    {
+      "project": "egr-sensor",
+      "id": "fig4-steady",
+      "pdf": "Compact, real-time exhaust gas recirculation rate sensor for use in natural gas combustion engine control.pdf",
+      "page": 4,
+      "fig": 4
+    },
+    {
+      "project": "egr-sensor",
+      "id": "fig5-highspeed",
+      "pdf": "Compact, real-time exhaust gas recirculation rate sensor for use in natural gas combustion engine control.pdf",
+      "page": 5,
+      "fig": 5
+    },
+    {
+      "project": "firebrands",
+      "id": "fig1-generator",
+      "pdf": "High-speed thermal imaging of disk-shaped firebrands in a wind tunnel.pdf",
+      "page": 1,
+      "fig": 1
+    },
+    {
+      "project": "firebrands",
+      "id": "fig5-paths",
+      "pdf": "High-speed thermal imaging of disk-shaped firebrands in a wind tunnel.pdf",
+      "page": 5,
+      "fig": 5
+    },
+    {
+      "project": "firebrands",
+      "id": "fig9-frequency",
+      "pdf": "High-speed thermal imaging of disk-shaped firebrands in a wind tunnel.pdf",
+      "page": 7,
+      "fig": 9
+    },
+    {
+      "project": "solar-desalination",
+      "id": "fig1-photo",
+      "pdf": "Experimental and numerical study of desalination.pdf",
+      "page": 2,
+      "fig": 1
+    },
+    {
+      "project": "solar-desalination",
+      "id": "fig2-scheme",
+      "pdf": "Experimental and numerical study of desalination.pdf",
+      "page": 2,
+      "fig": 2
+    },
+    {
+      "project": "solar-desalination",
+      "id": "fig5-yield",
+      "pdf": "Experimental and numerical study of desalination.pdf",
+      "page": 5,
+      "fig": 5,
+      "clip": [
+        130,
+        470,
+        470,
+        721
+      ]
+    },
+    {
+      "project": "solar-desalination",
+      "id": "fig14-model",
+      "pdf": "Experimental and numerical study of desalination.pdf",
+      "page": 10,
+      "fig": 14
+    },
+    {
+      "project": "solar-drying",
+      "id": "exp-fig2-dryer",
+      "pdf": "Sawdust drying in a series of rectangular base spouted beds using solar energy.pdf",
+      "page": 2,
+      "fig": 2
+    },
+    {
+      "project": "solar-drying",
+      "id": "exp-fig4-beds",
+      "pdf": "Sawdust drying in a series of rectangular base spouted beds using solar energy.pdf",
+      "page": 3,
+      "fig": 4
+    },
+    {
+      "project": "solar-drying",
+      "id": "exp-fig5-thermo",
+      "pdf": "Sawdust drying in a series of rectangular base spouted beds using solar energy.pdf",
+      "page": 4,
+      "fig": 5
+    },
+    {
+      "project": "solar-drying",
+      "id": "model-fig2-accumulator",
+      "pdf": "Modeling of sawdust drying in spouted beds using solar energy and phase change materials.pdf",
+      "page": 3,
+      "fig": 2
+    },
+    {
+      "project": "solar-drying",
+      "id": "model-fig8-outlet",
+      "pdf": "Modeling of sawdust drying in spouted beds using solar energy and phase change materials.pdf",
+      "page": 7,
+      "fig": 8
+    }
+  ]
+}

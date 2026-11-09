@@ -1,0 +1,57 @@
+{
+  "_comment": "Other projects: teaching, books, essays, code. type: 'book' | 'teaching' | 'essay' | 'code'. Set 'pdf' to a file in assets/docs/ to show a download button; leave it empty to show 'coming soon'.",
+  "projects": [
+    {
+      "id": "algebra-book",
+      "title": "Complemento de Álgebra",
+      "subtitle": "Álgebra lineal y ecuaciones diferenciales para ingeniería",
+      "types": ["book", "teaching"],
+      "language": "Spanish",
+      "year": "2026 edition",
+      "short": "An open textbook for engineering students at USACH: from matrices to the Laplace transform, with worked engineering problems.",
+      "description": [
+        "This book grew out of the algebra recitations I taught at the University of Santiago of Chile. It covers the linear algebra and differential equations an engineering student needs, using problems from chemical and mechanical engineering: flow networks, heat-transfer meshes, chemical balances, springs and control systems.",
+        "The 2026 edition is a complete clean-up of the original course notes: restructured into chapters, re-typeset in modern LaTeX, with corrected derivations and fully worked solutions."
+      ],
+      "stats": [
+        { "value": "113", "label": "Pages" },
+        { "value": "8", "label": "Chapters" },
+        { "value": "2", "label": "Appendices" }
+      ],
+      "toc": [
+        "Matrices",
+        "Determinantes",
+        "Sistemas de ecuaciones lineales",
+        "Espacios vectoriales",
+        "Transformaciones lineales",
+        "Ecuaciones diferenciales de primer orden",
+        "Ecuaciones diferenciales de segundo orden",
+        "Transformada de Laplace",
+        "A · Tabla de transformadas de Laplace",
+        "B · Respuestas de ejercicios seleccionados"
+      ],
+      "previews": ["p1", "p7", "p23", "p41", "p107"],
+      "license": "CC BY-NC-SA 4.0",
+      "pdf": "",
+      "pdfNote": "Free PDF coming soon: the remaining third-party figures are being redrawn so the book can be shared openly.",
+      "changelog": [
+        "Split the single 8,000-line file into 8 chapters, a preface and 2 appendices.",
+        "Replaced obsolete LaTeX (eqnarray, manual accents) with modern amsmath and UTF-8.",
+        "Fixed sign and index errors in derivations; completed worked solutions (Alka-Seltzer stoichiometry, water network, dairy plants, arsine redox)."
+      ]
+    },
+    {
+      "id": "ligo-squeezing",
+      "title": "Squeezing light and its role in gravitational-wave detection",
+      "subtitle": "Review essay · CU Boulder graduate course with Prof. Scott Diddams",
+      "types": ["essay"],
+      "language": "English",
+      "year": "",
+      "short": "How squeezed states of light push LIGO below the quantum noise limit.",
+      "description": [
+        "A review of quantum noise in laser interferometers and how injecting squeezed vacuum lowers shot noise, enabling more sensitive gravitational-wave detectors such as LIGO."
+      ],
+      "hidden": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Source material stays local: third-party papers, paper PDFs, raw photos
+resources/
+
+# Book LaTeX source is worked on separately; only the finished PDF is published
+# (copy it to assets/docs/ and set "pdf" in src/data/other-projects.json)
+/book/
+
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+tools/.hitran_cache/

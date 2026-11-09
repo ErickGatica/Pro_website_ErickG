@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Lightbox: full-screen viewer for paper figures and book pages
+   ========================================================================== */
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: rgba(8, 9, 12, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 360ms var(--ease-out), visibility 0s 360ms;
+}
+.lb.is-open { opacity: 1; visibility: visible; transition: opacity 360ms var(--ease-out), visibility 0s; }
+
+.lb__top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.8rem var(--gutter); }
+.lb__counter { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted); }
+.lb__counter b { color: var(--text); font-weight: 500; }
+
+.icon-btn { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 10px; color: var(--muted); transition: color var(--dur-fast), background var(--dur-fast); }
+.icon-btn:hover { color: var(--text); background: var(--surface-2); }
+.icon-btn svg { width: 20px; height: 20px; }
+
+.lb__stage { position: relative; min-height: 0; display: grid; place-items: center; padding: 0 clamp(0.5rem, 5vw, 5rem); touch-action: pan-y; }
+.lb__frame { max-width: 100%; max-height: 100%; display: grid; place-items: center; transition: opacity 300ms var(--ease-out), transform 400ms var(--ease-out); }
+.lb__frame.is-entering { opacity: 0; transform: scale(0.97); }
+.lb__frame img { max-width: min(100%, 1400px); max-height: calc(100svh - 190px); width: auto; height: auto; object-fit: contain; border-radius: 6px; background: var(--paper); padding: 0.8rem; box-shadow: var(--shadow-lg); }
+
+.lb__nav { position: absolute; top: 50%; translate: 0 -50%; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--glass); border: 1px solid var(--glass-border); color: var(--text); transition: background var(--dur-fast); }
+.lb__nav:hover { background: var(--surface-2); }
+.lb__nav svg { width: 20px; height: 20px; }
+.lb__nav--prev { left: 1rem; }
+.lb__nav--next { right: 1rem; }
+
+.lb__caption { padding: 0.8rem var(--gutter) 1.2rem; max-width: 980px; margin: 0 auto; font-size: var(--fs-sm); color: #cfcbc3; text-align: center; }
+.lb__caption small { display: block; margin-top: 0.3rem; color: var(--faint); font-size: var(--fs-xs); }
+.lb__caption a { color: var(--blue); }
+
+@media (max-width: 760px) {
+  .lb__nav { display: none; }
+  .lb__frame img { max-height: calc(100svh - 230px); padding: 0.4rem; }
+}

@@ -1,0 +1,167 @@
+{
+  "_comment": "CV content, from CV_Erick_Gatica_in_English.pdf. Entries render in the order given. 'kind' sets the timeline dot colour: research | teaching | industry | education | leadership.",
+  "summary": "Ph.D. researcher at the University of Colorado Boulder specializing in optical diagnostics, laser absorption spectroscopy sensors for hydrogen and natural gas combustion, thermal-fluid modelling, and dual-comb spectroscopy. Experienced in university teaching, process simulation, solar desalination systems, and engineering consulting.",
+  "education": [
+    {
+      "title": "Ph.D. in Mechanical Engineering",
+      "org": "University of Colorado Boulder",
+      "place": "Boulder, CO",
+      "dates": "2023 – 2028",
+      "kind": "education",
+      "bullets": ["Fourth-year Ph.D. student and Fulbright Scholar.", "M.Sc. in Mechanical Engineering conferred May 2025."]
+    },
+    {
+      "title": "Fulbright Pre-Academic Program",
+      "org": "Drexel University",
+      "place": "Philadelphia, PA",
+      "dates": "2023",
+      "kind": "education",
+      "bullets": ["Six-week intensive multicultural academic leadership and research training program."]
+    },
+    {
+      "title": "M.Sc. in Engineering Sciences, Chemical Engineering",
+      "org": "University of Santiago of Chile",
+      "place": "Santiago, Chile",
+      "dates": "2019 – 2020",
+      "kind": "education",
+      "bullets": ["GPA 6.8 / 7.0, graduated with Maximum Distinction."]
+    },
+    {
+      "title": "Chemical Civil Engineer (B.S. + M.Eng. equivalent)",
+      "org": "University of Santiago of Chile",
+      "place": "Santiago, Chile",
+      "dates": "2015 – 2020",
+      "kind": "education",
+      "bullets": ["Class rank 1st (final mark 6.5 / 7.0), graduated with Distinction."]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Graduate Research Assistant",
+      "org": "University of Colorado Boulder",
+      "place": "Boulder, CO",
+      "dates": "2023 – Present",
+      "kind": "research",
+      "bullets": [
+        "Develop software and hardware for laser-based sensors applied to hydrogen engines and combustion systems in the Precision Laser Diagnostics for Energy and the Environment Lab under Dr. Greg Rieker.",
+        "Implement real-time data acquisition, optical diagnostics and embedded system workflows."
+      ]
+    },
+    {
+      "title": "Research Assistant",
+      "org": "University of Santiago of Chile",
+      "place": "Chile",
+      "dates": "Jul 2022 – Present",
+      "kind": "research",
+      "bullets": ["Desalination processes using phase change materials and solar energy, focusing on building and modelling the processes."]
+    },
+    {
+      "title": "Adjunct Lecturer / Instructor",
+      "org": "Autonomous University of Chile",
+      "place": "Chile",
+      "dates": "Jul 2022 – Jan 2023",
+      "kind": "teaching",
+      "bullets": ["Taught undergraduate courses in Process Control."]
+    },
+    {
+      "title": "University Instructor & Teaching Assistant",
+      "org": "University of Santiago of Chile",
+      "place": "Chile",
+      "dates": "Jan 2020 – Present",
+      "kind": "teaching",
+      "bullets": [
+        "Laboratory and recitation classes in Transport Phenomena, Mass Transfer, Chemical Process Calculations and Process Engineering Thermodynamics for Chemical Civil Engineering.",
+        "Mathematics, applied thermodynamics and algebra recitations across the Faculty of Engineering and the Faculty of Administration and Economics."
+      ]
+    },
+    {
+      "title": "Technical Editor",
+      "org": "University of Santiago of Chile",
+      "place": "Chile",
+      "dates": "May 2022 – Jul 2022",
+      "kind": "research",
+      "bullets": ["Reviewed and edited theoretical foundations and applied exercises for the Handbook of Chemical Reactor Design by Dr. Aldo Saavedra."]
+    },
+    {
+      "title": "Independent Consulting Engineer",
+      "org": "Social Renewable",
+      "place": "Chile",
+      "dates": "Oct 2021 – Feb 2022",
+      "kind": "industry",
+      "bullets": ["Consulting engineering for client projects in environmental sustainability, energy efficiency and renewable energy."]
+    },
+    {
+      "title": "FONDECYT Support Staff",
+      "org": "University of Santiago of Chile",
+      "place": "Chile",
+      "dates": "Oct 2021 – Apr 2022",
+      "kind": "research",
+      "bullets": ["Managed experiments and supervised thesis work in a FONDECYT project on solar energy storage, spouted beds and water desalination."]
+    },
+    {
+      "title": "Chemical Civil Engineering Intern",
+      "org": "Maltexco-Patagonia Malt",
+      "place": "Chile",
+      "dates": "Feb 2020 – Mar 2020",
+      "kind": "industry",
+      "bullets": [
+        "Worked with the plant and laboratory teams on experimental designs for process optimization.",
+        "Analysed reducing sugars and correlated them with the degree of caramelization in special caramel-type malts."
+      ]
+    },
+    {
+      "title": "Fluid Mechanics Laboratory Assistant",
+      "org": "University of Santiago of Chile",
+      "place": "Chile",
+      "dates": "Jun 2018 – Nov 2020",
+      "kind": "teaching",
+      "bullets": ["Conducted fluid mechanics experiments using prototype-scale equipment."]
+    },
+    {
+      "title": "Differential Equations Teaching Assistant",
+      "org": "University of Santiago of Chile",
+      "place": "Chile",
+      "dates": "Jan 2017 – Dec 2018",
+      "kind": "teaching",
+      "bullets": ["Face-to-face recitation classes supporting engineering coursework in differential equations."]
+    },
+    {
+      "title": "Chemical Laboratory Technician Intern",
+      "org": "Eurofins GCL",
+      "place": "Chile",
+      "dates": "Nov 2014 – Feb 2015",
+      "kind": "industry",
+      "bullets": [
+        "Fertilizer analysis (blue and yellow phosphorus, sulfur, biuret) and nutritional analysis of food samples.",
+        "Prepared validated technical reports for national and international clients."
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "title": "Member, SOAR Board, ISSS",
+      "org": "CU Boulder",
+      "place": "Boulder, CO",
+      "dates": "Apr 2026 – Present",
+      "kind": "leadership",
+      "bullets": [
+        "Students Organizing for Arrival and Resources (SOAR) Board.",
+        "Organized orientation activities for international students and produced marketing content."
+      ]
+    }
+  ],
+  "skills": [
+    { "group": "Programming", "items": ["Python", "C++", "MATLAB", "LaTeX"] },
+    { "group": "Instrumentation", "items": ["Data acquisition", "Signal analysis", "Embedded software", "Laser absorption sensors"] },
+    { "group": "Simulation", "items": ["ANSYS Fluent", "OpenFOAM", "Aspen HYSYS", "CFD", "Finite volumes", "Process simulation"] },
+    { "group": "Languages", "items": ["Spanish (native)", "English (fluent, TOEFL iBT 94)"] }
+  ],
+  "courses": [
+    { "title": "Green Hydrogen: Opportunities and Applications", "org": "CORFO", "dates": "Jan – Mar 2022", "detail": "Production, storage, industrial applications and regulations." },
+    { "title": "CAE Fundamentals (ANSYS)", "org": "iESSS", "dates": "Jun 2021", "detail": "Finite element and CFD analysis fundamentals." },
+    { "title": "Advanced graduate coursework", "org": "USACH", "dates": "2019 – 2020", "detail": "Transport phenomena, thermodynamics, control, finite volumes." },
+    { "title": "FONDECYT research project thesis", "org": "USACH", "dates": "2019 – 2021", "detail": "Modelling and experimental solar drying in spouted beds." },
+    { "title": "Process Control Loops Workshop", "org": "Binational Congress", "dates": "Oct 2019", "detail": "" },
+    { "title": "Chem-E-Car Project & Mining Course", "org": "ChemEng Congress", "dates": "Oct 2018", "detail": "" }
+  ]
+}

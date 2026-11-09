@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Other projects: list cards and the book detail page
+   ========================================================================== */
+.pcard { display: grid; grid-template-columns: 200px 1fr; overflow: hidden; }
+.pcard__cover { position: relative; background: radial-gradient(100% 100% at 30% 20%, rgba(240, 172, 95, 0.14), transparent 70%), var(--bg-elev); display: grid; place-items: center; padding: 1.2rem; border-right: 1px solid var(--line); }
+.pcard__cover img { width: 100%; max-width: 150px; border-radius: 4px; box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.8); transform: rotate(-3deg); transition: transform var(--dur-slow) var(--ease-out); }
+.pcard:hover .pcard__cover img { transform: rotate(0) scale(1.04); }
+.pcard__body { padding: 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.pcard__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pcard h3 { font-size: 1.35rem; }
+.pcard__sub { font-size: var(--fs-sm); color: var(--blue); }
+.pcard p { color: var(--muted); font-size: var(--fs-sm); }
+.pcard .rcard__go { margin-top: auto; }
+
+/* Book detail */
+.book { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: clamp(2rem, 1rem + 3vw, 4rem); align-items: start; }
+.book__cover { position: sticky; top: calc(var(--nav-h) + 1.5rem); display: grid; gap: 1rem; }
+.book__cover-img { display: block; border-radius: 6px; overflow: hidden; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.85), 0 0 0 1px var(--line); transform: perspective(900px) rotateY(8deg); transition: transform var(--dur-slow) var(--ease-out); cursor: zoom-in; }
+.book__cover-img:hover { transform: perspective(900px) rotateY(0); }
+.book__download { display: grid; gap: 0.5rem; }
+.book__soon { font-size: var(--fs-sm); color: var(--muted); padding: 0.9rem 1rem; border: 1px dashed var(--line-strong); border-radius: var(--radius); }
+.book__soon b { color: var(--gold); font-weight: 500; display: block; margin-bottom: 0.2rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.license { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); }
+.license svg { width: 16px; height: 16px; }
+
+.toc { list-style: none; counter-reset: ch; display: grid; gap: 1px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--line); }
+.toc li { counter-increment: ch; background: var(--bg-elev); padding: 0.7rem 1rem; display: flex; gap: 1rem; align-items: baseline; font-size: var(--fs-sm); transition: background var(--dur-fast); }
+.toc li:hover { background: #151821; }
+.toc li::before { content: counter(ch, decimal-leading-zero); font-family: var(--font-mono); font-size: 0.75rem; color: var(--gold); min-width: 1.6rem; }
+.toc li.toc__appendix::before { content: "—"; color: var(--faint); }
+
+.previews { display: flex; gap: 0.9rem; overflow-x: auto; padding: 0.4rem 0.2rem 1rem; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.previews button { flex: 0 0 auto; width: 170px; scroll-snap-align: start; border-radius: 4px; overflow: hidden; box-shadow: 0 0 0 1px var(--line); transition: transform var(--dur) var(--ease-out), box-shadow var(--dur); }
+.previews button:hover { transform: translateY(-4px); box-shadow: 0 0 0 1px var(--gold), 0 12px 26px -10px rgba(0, 0, 0, 0.8); }
+
+.changelog { list-style: none; display: grid; gap: 0.6rem; }
+.changelog li { position: relative; padding-left: 1.4rem; font-size: var(--fs-sm); color: #d4d1ca; }
+.changelog li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 8px; height: 8px; border-radius: 2px; border: 1.5px solid var(--teal); }
+
+@media (max-width: 860px) {
+  .book { grid-template-columns: 1fr; }
+  .book__cover { position: static; max-width: 300px; }
+}
+@media (max-width: 560px) {
+  .pcard { grid-template-columns: 1fr; }
+  .pcard__cover { border-right: 0; border-bottom: 1px solid var(--line); }
+  .pcard__cover img { max-width: 120px; }
+}

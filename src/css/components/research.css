@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Research: list page filters and project detail page
+   ========================================================================== */
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1.2rem; margin-bottom: 1.8rem; }
+.filters__count { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--faint); }
+
+.era { margin-top: clamp(2.5rem, 2rem + 2vw, 4rem); }
+.era:first-of-type { margin-top: 0; }
+.era__head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.2rem; }
+.era__head h2 { font-size: 1.1rem; font-family: var(--font-mono); font-weight: 500; letter-spacing: 0.02em; color: var(--muted); white-space: nowrap; }
+.era__head .draw-line { flex: 1; }
+.rcard.is-filtered { display: none; }
+
+/* Detail page */
+.back { display: inline-flex; align-items: center; gap: 0.4rem; font-size: var(--fs-sm); color: var(--muted); margin-bottom: 1.6rem; transition: color var(--dur-fast); }
+.back svg { width: 16px; height: 16px; transform: scaleX(-1); transition: transform var(--dur) var(--ease-out); }
+.back:hover { color: var(--text); }
+.back:hover svg { transform: scaleX(-1) translateX(3px); }
+
+.detail__head { display: grid; gap: 1rem; max-width: 900px; }
+.detail__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.detail__title { font-size: var(--fs-2xl); letter-spacing: -0.03em; }
+.detail__meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted); }
+
+.detail__layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: clamp(2rem, 1rem + 3vw, 4rem); margin-top: clamp(2rem, 1.5rem + 2vw, 3rem); align-items: start; }
+.detail__aside { position: sticky; top: calc(var(--nav-h) + 1.5rem); display: grid; gap: 1rem; }
+.detail__role { padding: 1rem 1.1rem; border-left: 2px solid var(--red); background: linear-gradient(90deg, rgba(252, 98, 85, 0.08), transparent); font-size: var(--fs-sm); color: #d4d1ca; }
+.detail__role b { display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 400; color: var(--red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.detail__note { font-size: var(--fs-sm); color: var(--muted); font-style: italic; }
+.detail__section { margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem); }
+.detail__section > h2 { font-size: 1.25rem; margin-bottom: 1.1rem; display: flex; align-items: center; gap: 0.8rem; }
+.detail__section > h2::before { content: ""; width: 14px; height: 2px; background: var(--blue); }
+
+.figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 1rem; align-items: start; }
+.figs .figure:first-child { grid-column: 1 / -1; }
+.figs .figure:first-child .figure__img img { max-height: 560px; }
+
+.pager { margin-top: clamp(3rem, 2rem + 3vw, 5rem); display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.pager a { padding: 1.1rem 1.2rem; display: grid; gap: 0.2rem; }
+.pager small { font-family: var(--font-mono); font-size: 0.68rem; color: var(--faint); text-transform: uppercase; letter-spacing: 0.1em; }
+.pager span { font-family: var(--font-display); font-weight: 500; }
+.pager a:last-child { text-align: right; }
+
+@media (max-width: 900px) {
+  .detail__layout { grid-template-columns: 1fr; }
+  .detail__aside { position: static; }
+}
+@media (max-width: 560px) {
+  .pager { grid-template-columns: 1fr; }
+  .pager a:last-child { text-align: left; }
+}

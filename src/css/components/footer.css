@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer { margin-top: clamp(3rem, 2rem + 4vw, 6rem); border-top: 1px solid var(--line); padding-block: 2.5rem 2rem; }
+.footer__top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+.footer__name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; }
+.footer__role { color: var(--muted); font-size: var(--fs-sm); margin-top: 0.3rem; max-width: 36ch; }
+.footer__cols { display: flex; flex-wrap: wrap; gap: 2.5rem 4rem; }
+.footer__col h4 { font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); margin-bottom: 0.7rem; }
+.footer__col a { display: block; font-size: var(--fs-sm); color: var(--muted); padding: 0.15rem 0; transition: color var(--dur-fast); }
+.footer__col a:hover { color: var(--text); }
+.footer__bottom { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem; font-size: var(--fs-xs); color: var(--faint); }

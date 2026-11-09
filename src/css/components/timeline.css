@@ -1,0 +1,48 @@
+/* ==========================================================================
+   CV timeline: a vertical "beam" with entries that light up on scroll
+   ========================================================================== */
+.timeline { position: relative; list-style: none; padding-left: 2rem; }
+.timeline::before {                      /* the beam */
+  content: "";
+  position: absolute;
+  left: 6px; top: 0.4rem; bottom: 0.4rem;
+  width: 2px;
+  background: linear-gradient(var(--blue), rgba(88, 196, 221, 0.15));
+  transform-origin: top;
+  transform: scaleY(var(--progress, 0));
+  transition: transform 300ms linear;
+}
+.timeline::after { content: ""; position: absolute; left: 6px; top: 0.4rem; bottom: 0.4rem; width: 2px; background: var(--line); z-index: -1; }
+
+.tl-item { position: relative; padding-bottom: 1.6rem; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {                       /* node */
+  content: "";
+  position: absolute;
+  left: calc(-2rem + 1px);
+  top: 0.45rem;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--c, var(--blue));
+  transition: box-shadow var(--dur-slow), background var(--dur-slow);
+}
+.tl-item.is-visible::before { background: var(--c, var(--blue)); box-shadow: 0 0 12px var(--c, var(--blue)); }
+.tl-item--research { --c: var(--blue); }
+.tl-item--teaching { --c: var(--teal); }
+.tl-item--industry { --c: var(--gold); }
+.tl-item--education { --c: var(--purple); }
+.tl-item--leadership { --c: var(--red); }
+
+.tl-item__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.2rem 1rem; align-items: baseline; }
+.tl-item h3 { font-size: 1.08rem; }
+.tl-item__dates { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+.tl-item__org { font-size: var(--fs-sm); color: var(--c, var(--blue)); }
+.tl-item__org span { color: var(--faint); }
+.tl-item ul { margin-top: 0.5rem; padding-left: 1rem; display: grid; gap: 0.3rem; }
+.tl-item li { font-size: var(--fs-sm); color: #cfcbc3; }
+.tl-item li::marker { color: var(--faint); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; font-size: var(--fs-xs); color: var(--muted); margin-bottom: 1.5rem; }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.legend span::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c); }

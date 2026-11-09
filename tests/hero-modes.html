@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hero modes preview</title>
+  <style>body { margin: 0; background: #000; } iframe { border: 0; display: block; width: 100vw; height: 100vh; }</style>
+</head>
+<body>
+  <!-- Dev tool: opens the home page and switches the hero to a mode.
+       Usage: /tests/hero-modes.html?mode=wms&T=1800   (mode: direct | wms | dualcomb; optional T, P, x) -->
+  <iframe id="site" src="../index.html#/"></iframe>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const frame = document.getElementById("site");
+
+    /** Sets a slider value inside the site and fires its input event. */
+    function setSlider(doc, key, value) {
+      const input = doc.getElementById(`hero-${key}`);
+      if (!input) return;
+      input.value = value;
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+
+    frame.addEventListener("load", () => {
+      const tryApply = () => {
+        const doc = frame.contentDocument;
+        const tab = doc.getElementById(`mode-${params.get("mode") || "direct"}`);
+        if (!tab || !doc.getElementById("hero-T").value) return setTimeout(tryApply, 200);
+        tab.click();
+        ["T", "P", "x"].forEach((k) => params.has(k) && setSlider(doc, k, params.get(k)));
+      };
+      tryApply();
+    });
+  </script>
+</body>
+</html>

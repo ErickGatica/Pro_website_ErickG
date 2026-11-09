@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Design tokens: manim-inspired dark palette, type, spacing, motion.
+   Change values here to restyle the whole site.
+   ========================================================================== */
+:root {
+  /* Surfaces */
+  --bg: #0b0c10;
+  --bg-elev: #101218;
+  --bg-grid: rgba(88, 196, 221, 0.06);
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --paper: #f6f4ef;                       /* light card behind journal figures */
+
+  /* Text */
+  --text: #ece9e2;
+  --muted: #a3abb8;                       /* ≥ 4.5:1 on --bg */
+  --faint: #6b7380;
+
+  /* manim accents */
+  --blue: #58c4dd;
+  --teal: #5cd0b3;
+  --yellow: #f7d96f;
+  --red: #fc6255;
+  --gold: #f0ac5f;
+  --purple: #b48ad0;                      /* lightened manim purple for contrast */
+
+  --accent: var(--blue);
+  --accent-grad: linear-gradient(110deg, var(--red) 0%, var(--gold) 45%, var(--blue) 100%);
+
+  --glass: rgba(13, 15, 20, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.09);
+
+  /* Typography */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-math: "Cambria Math", "STIX Two Math", "Latin Modern Math", "Times New Roman", serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem);
+  --fs-2xl: clamp(1.9rem, 1.4rem + 2vw, 3rem);
+  --fs-3xl: clamp(2.4rem, 1.6rem + 3.6vw, 4.6rem);
+
+  /* Layout */
+  --container: 1280px;
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --nav-h: 68px;
+
+  /* Motion: manim's "smooth" rate function */
+  --ease-smooth: cubic-bezier(0.45, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur: 360ms;
+  --dur-slow: 800ms;
+
+  --shadow-lg: 0 30px 60px -24px rgba(0, 0, 0, 0.75), 0 10px 22px -12px rgba(0, 0, 0, 0.6);
+  --glow-blue: 0 0 24px rgba(88, 196, 221, 0.25);
+  --glow-red: 0 0 24px rgba(252, 98, 85, 0.35);
+}

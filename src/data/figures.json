@@ -1,0 +1,122 @@
+{
+  "egr-sensor": [
+    {
+      "id": "fig1-location",
+      "fig": 1,
+      "caption": "Diagram showing the location of the laser-based sensor in the gas flow.",
+      "width": 800,
+      "height": 704
+    },
+    {
+      "id": "fig2-sensor",
+      "fig": 2,
+      "caption": "Image of the complete sensor, including lasers and drivers, data acquisition/processor, and electronics.",
+      "width": 768,
+      "height": 501
+    },
+    {
+      "id": "fig4-steady",
+      "fig": 4,
+      "caption": "Steady state EGR rate using the laser-based sensor (red) and CO2-based measurement (blue).",
+      "width": 825,
+      "height": 656
+    },
+    {
+      "id": "fig5-highspeed",
+      "fig": 5,
+      "caption": "High-speed measurements of EGR for the engine running at 1000 (red) and 1500 rpm (blue), the two dashed lines show the expected frequency.",
+      "width": 822,
+      "height": 703
+    }
+  ],
+  "firebrands": [
+    {
+      "id": "fig1-generator",
+      "fig": 1,
+      "caption": "a) Diagram of the firebrand generator, the dimensions refer to the diameter of each component: (1) Particle Feed; (2) Air feed; (3) Venturi mixer; (4) Methane feed; (5) Combustion chamber orifice; (6) Ignition port; (7) Flap valve; (8) Combustion Chamber; (9) Backpressure induction valve; (10) Mesh filter; (11) Exhaust port; (12) Firebrand output. b) An image showing the location of the firebrand dropper and the camera field of view in relation to the wind tunnel test section.",
+      "width": 1038,
+      "height": 1448
+    },
+    {
+      "id": "fig5-paths",
+      "fig": 5,
+      "caption": "a) shows the paths followed by each particle during the measurements (each color indicates a unique particle). b) shows the aggregate color temperature time history and path traveled by the particles measured during the three conditions. The figures show the combined data from each set of videos at each condition.",
+      "width": 1600,
+      "height": 915
+    },
+    {
+      "id": "fig9-frequency",
+      "fig": 9,
+      "caption": "Shows the correlation between color temperature oscillation frequency and the speed of the firebrand particle relative to the wind which was measured during the three runs. The correlations represent the ensemble of all of the measured particles. The error bars on the x-axis represent the speed range of the averaging bin and the y-axis error bars represent the weighted standard error of the set of fluctuation frequencies in each bin.",
+      "width": 1450,
+      "height": 499
+    }
+  ],
+  "solar-desalination": [
+    {
+      "id": "fig1-photo",
+      "fig": 1,
+      "caption": "Solar desalinator photograph.",
+      "width": 1025,
+      "height": 724
+    },
+    {
+      "id": "fig2-scheme",
+      "fig": 2,
+      "caption": "Solar desalinator scheme: (a) Isometric view; (b) Lateral view.",
+      "width": 1031,
+      "height": 1124
+    },
+    {
+      "id": "fig5-yield",
+      "fig": 5,
+      "caption": "Daily experimental condensate water mass per area obtained using paraffin wax, coconut oil or no PCM, and saline water loads of 5.55 kg, 8.25 kg and 11.0 kg.",
+      "width": 1383,
+      "height": 983
+    },
+    {
+      "id": "fig14-model",
+      "fig": 14,
+      "caption": "Comparison of the total experimental data with the predictions of the mathematical model: (a) Condensate water mass; (b) Glass cover temperature.",
+      "width": 1033,
+      "height": 1861
+    }
+  ],
+  "solar-drying": [
+    {
+      "id": "exp-fig2-dryer",
+      "fig": 2,
+      "caption": "Schematic of the proposed dryer.",
+      "width": 1600,
+      "height": 930
+    },
+    {
+      "id": "exp-fig4-beds",
+      "fig": 4,
+      "caption": "Rectangular base spouted bed used in the study: (a) solid feeding system (b) spouted beds connected in series.",
+      "width": 1600,
+      "height": 1011
+    },
+    {
+      "id": "exp-fig5-thermo",
+      "fig": 5,
+      "caption": "Thermographic images of the solar energy accumulator with an air flow of 0.242 kg/s: (a) region 𝑗∈[7, 12] taken at 17:13 (b) region 𝑗∈[19, 24] taken at 17:08.",
+      "width": 1033,
+      "height": 1683
+    },
+    {
+      "id": "model-fig2-accumulator",
+      "fig": 2,
+      "caption": "Solar energy accumulator panel: (a) sketch (b) actual picture of the equipment.",
+      "width": 978,
+      "height": 2631
+    },
+    {
+      "id": "model-fig8-outlet",
+      "fig": 8,
+      "caption": "Solar energy accumulator panel outlet air temperature for air flows 0.078 and 0.385 kg/s.",
+      "width": 978,
+      "height": 805
+    }
+  ]
+}

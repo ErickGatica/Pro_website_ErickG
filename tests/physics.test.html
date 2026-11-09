@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Physics test</title>
+  <style>
+    body { font: 14px/1.5 ui-monospace, Menlo, monospace; background: #0b0c10; color: #ece9e2; padding: 2rem; }
+    table { border-collapse: collapse; margin-top: 1rem; }
+    td, th { padding: .3rem .9rem; border-bottom: 1px solid #222; text-align: right; }
+    .pass { color: #5CD0B3; } .fail { color: #FC6255; }
+  </style>
+</head>
+<body>
+  <h1>Hero physics vs HITRAN/HAPI</h1>
+  <p>Pass if the maximum absorbance error is within 2 % of the peak for every case.
+     Serve the site root (<code>python3 -m http.server</code>) and open <code>/tests/physics.test.html</code>.</p>
+  <div id="out">Running…</div>
+
+  <script type="module">
+    import { absorbanceSpectrum, wms2f1f, makeAlphaInterpolator, makeGrid } from "../src/js/hero/physics.js";
+
+    const TOLERANCE = 0.02;
+
+    /** Max |js − ref| divided by the reference peak. */
+    function relativeError(js, ref) {
+      const peak = Math.max(...ref);
+      let worst = 0;
+      ref.forEach((r, i) => { worst = Math.max(worst, Math.abs(js[i] - r)); });
+      return worst / peak;
+    }
+
+    /** Compares the JS absorbance with each HAPI reference case. */
+    function checkAbsorbance(data, ref) {
+      const grid = Float64Array.from(ref.grid);
+      return ref.cases.map((c) => {
+        const js = absorbanceSpectrum(data, grid, { T: c.T, P: c.P, x: c.x, L: ref.L_cm });
+        const err = relativeError(js, c.absorbance);
+        return { name: `α(ν)  T=${c.T} K  P=${c.P} atm`, value: `${(err * 100).toFixed(2)} %`, pass: err <= TOLERANCE };
+      });
+    }
+
+    /** WMS-2f/1f of a single symmetric Lorentzian line must itself be symmetric about the line center. */
+    function checkWmsSymmetry() {
+      const center = 6806, w = 0.05;
+      const alphaAt = (nu) => 0.05 / (1 + ((nu - center) / w) ** 2);
+      const grid = Float64Array.from({ length: 201 }, (_, i) => center - 0.5 + i * 0.005);
+      const s = wms2f1f(alphaAt, grid, 2.2 * w, { i1: 0 });  // no intensity modulation → exact symmetry
+      let asym = 0;
+      for (let i = 0; i < 100; i++) asym = Math.max(asym, Math.abs(s[i] - s[200 - i]));
+      const rel = asym / Math.max(...s);
+      return { name: "WMS-2f/1f symmetric for isolated line", value: `${(rel * 100).toFixed(3)} %`, pass: rel < 0.005 };
+    }
+
+    /** The interpolator must reproduce the dense spectrum at the grid nodes. */
+    function checkInterpolator(data) {
+      const grid = makeGrid(data, 400);
+      const alpha = absorbanceSpectrum(data, grid, { T: 1000, P: 1, x: 0.1, L: data.defaults.L_cm });
+      const f = makeAlphaInterpolator(grid, alpha);
+      const err = Math.max(...Array.from(grid, (nu, i) => Math.abs(f(nu) - alpha[i])));
+      return { name: "α interpolator exact at nodes", value: err.toExponential(1), pass: err < 1e-9 };
+    }
+
+    function render(results) {
+      const allPass = results.every((r) => r.pass);
+      document.title = allPass ? "PASS" : "FAIL";
+      document.getElementById("out").innerHTML = `
+        <h2 class="${allPass ? "pass" : "fail"}">${allPass ? "ALL PASS" : "FAILURES"}</h2>
+        <table><tr><th>check</th><th>result</th><th></th></tr>
+        ${results.map((r) => `<tr><td style="text-align:left">${r.name}</td><td>${r.value}</td>
+          <td class="${r.pass ? "pass" : "fail"}">${r.pass ? "pass" : "FAIL"}</td></tr>`).join("")}
+        </table>`;
+    }
+
+    const [data, ref] = await Promise.all([
+      fetch("../src/data/spectra.json").then((r) => r.json()),
+      fetch("./reference_spectra.json").then((r) => r.json()),
+    ]);
+    render([...checkAbsorbance(data, ref), checkWmsSymmetry(), checkInterpolator(data)]);
+  </script>
+</body>
+</html>
