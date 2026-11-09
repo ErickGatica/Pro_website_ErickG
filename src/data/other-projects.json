@@ -14,7 +14,7 @@
         "The 2026 edition is a complete clean-up of the original course notes: restructured into chapters, re-typeset in modern LaTeX, with corrected derivations and fully worked solutions."
       ],
       "stats": [
-        { "value": "113", "label": "Pages" },
+        { "value": "121", "label": "Pages" },
         { "value": "8", "label": "Chapters" },
         { "value": "2", "label": "Appendices" }
       ],
@@ -32,8 +32,8 @@
       ],
       "previews": ["p1", "p7", "p23", "p41", "p107"],
       "license": "CC BY-NC-SA 4.0",
-      "pdf": "",
-      "pdfNote": "Free PDF coming soon: the remaining third-party figures are being redrawn so the book can be shared openly.",
+      "pdf": "assets/docs/Complemento_de_Algebra.pdf",
+      "pdfNote": "",
       "changelog": [
         "Split the single 8,000-line file into 8 chapters, a preface and 2 appendices.",
         "Replaced obsolete LaTeX (eqnarray, manual accents) with modern amsmath and UTF-8.",
